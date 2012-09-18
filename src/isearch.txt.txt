@@ -1,0 +1,93 @@
+Problem 2.
+
+These program includes two heristics
+	a. h1: heuristic one   : one heuristic is to use the euclidian distance between two slide positions from its current position to its goal state.There will be 7 goal states here. The heuristic has to be calculated for each of the goal states.
+
+
+	b. h2: heuristic second: second heuristic is to use the number of misplaced tiles heuristic of its current position and its goal state.This heuristic has to calculated for each of the goal state and the minimum of them has to be taken.
+
+The cost of both the heuristics are printed in the end along with the path.
+
+when at each step max(h1,h2) is chosen the perfomance moves up even higher.
+
+h1:
+Start state: +SAAABBB 
+PRESS 1 for heuristic 1, 2 for using heuristic 2 
+
+using h1:
+ string tested at level 0:  SAAABBB weight propogated 0
+ string tested at level 1:  BAAABBS weight propogated 5
+ string tested at level 2:  BAASBBA weight propogated 1
+ string tested at level 3:  BAABBSA weight propogated 2
+ string tested at level 4:  BASBBAA weight propogated 1
+ string tested at level 5:  BABBSAA weight propogated 3
+ string tested at level 6:  BSBBAAA Goal state   weight of optimal path 12
+
+
+
+
+
+
+using h2:
+Start state: +SAAABBB 
+PRESS 1 for heuristic 1, 2 for using heuristic 2 
+
+2
+ string tested at level 0:  SAAABBB weight propogated 0
+ string tested at level 1:  AASABBB weight propogated 5
+ string tested at level 2:  AABABBS weight propogated 3
+ string tested at level 3:  AABSBBA weight propogated 1
+ string tested at level 4:  AABBBSA weight propogated 2
+ string tested at level 5:  ASBBBAA weight propogated 1
+ string tested at level 6:  ABBBSAA weight propogated 4
+ string tested at level 7:  SBBBAAA Goal state   weight of optimal path 16
+
+
+using h3: max(h1,h2)
+Start state: +SAAABBB 
+PRESS 1 for heuristic 1, 2 for using heuristic 2 
+
+3
+ string tested at level 0:  SAAABBB weight propogated 0
+ string tested at level 1:  BAAABBS weight propogated 5
+ string tested at level 2:  BAASBBA weight propogated 1
+ string tested at level 3:  BAABBSA weight propogated 2
+ string tested at level 4:  BASBBAA weight propogated 1
+ string tested at level 5:  BABBSAA weight propogated 3
+ string tested at level 6:  BSBBAAA Goal state   weight of optimal path 12
+
+
+sample traces:
+Trace 1
+Start state: +SAAABBB 
+PRESS 1 for heuristic 1, 2 for using heuristic 2 
+
+1
+ string tested at level 0:  SAAABBB weight propogated 0
+ string tested at level 1:  BAAABBS weight propogated 5
+ string tested at level 2:  BAASBBA weight propogated 1
+ string tested at level 3:  BAABBSA weight propogated 2
+ string tested at level 4:  BASBBAA weight propogated 1
+ string tested at level 5:  BABBSAA weight propogated 3
+ string tested at level 6:  BSBBAAA Goal state   weight of optimal path 12
+
+
+Trace 2
+Start state: +SAAABBB 
+PRESS 1 for heuristic 1, 2 for using heuristic 2 
+
+2
+ string tested at level 0:  SAAABBB weight propogated 0
+ string tested at level 1:  AASABBB weight propogated 5
+ string tested at level 2:  AABABBS weight propogated 3
+ string tested at level 3:  AABSBBA weight propogated 1
+ string tested at level 4:  AABBBSA weight propogated 2
+ string tested at level 5:  ASBBBAA weight propogated 1
+ string tested at level 6:  ABBBSAA weight propogated 4
+ string tested at level 7:  SBBBAAA Goal state   weight of optimal path 16
+
+
+
+
+
+
